@@ -16,7 +16,7 @@ export const FooterColumn: React.FC<Props> = ({ index, data }) => {
       </h5>
     ) : (
       <p key={index}>{item}</p>
-    )
+    ),
   );
 
   return (

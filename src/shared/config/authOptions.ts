@@ -1,4 +1,4 @@
-import {prisma} from "@shared/database";
+import { prisma } from "@shared/database";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import bcrypt from "bcryptjs";
 import { AuthOptions } from "next-auth";
@@ -20,9 +20,9 @@ export const authOptions: AuthOptions = {
       clientSecret: process.env.FACEBOOK_SECRET || "",
     }),
     GitHubProvider({
-        clientId: process.env.GITHUB_ID || '',
-        clientSecret: process.env.GITHUB_SECRET || '',
-      }),
+      clientId: process.env.GITHUB_ID || "",
+      clientSecret: process.env.GITHUB_SECRET || "",
+    }),
     CredentialsProvider({
       name: "credentials",
       credentials: {
@@ -46,7 +46,7 @@ export const authOptions: AuthOptions = {
 
         const isCorrectPassword = await bcrypt.compare(
           credentials.password,
-          user.hashedPassword
+          user.hashedPassword,
         );
         if (!isCorrectPassword) {
           throw new Error("Invalid credentials");

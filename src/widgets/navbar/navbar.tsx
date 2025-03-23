@@ -7,7 +7,7 @@ import { Container, Loader, Logo } from "@shared/ui";
 import { Suspense } from "react";
 
 type Props = {
-    currentUser?: SafeUser | null;
+  currentUser?: SafeUser | null;
 };
 
 export const Navbar: React.FC<Props> = ({ currentUser }) => {

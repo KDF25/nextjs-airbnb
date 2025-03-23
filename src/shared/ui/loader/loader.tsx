@@ -37,4 +37,3 @@ export const Loader: React.FC = () => {
     </motion.div>
   );
 };
-

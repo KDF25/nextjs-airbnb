@@ -11,7 +11,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { menuItems } from "./config";
 
 type Props = {
-    currentUser?: SafeUser | null;
+  currentUser?: SafeUser | null;
 };
 
 export const UserMenu: React.FC<Props> = ({ currentUser }: Props) => {

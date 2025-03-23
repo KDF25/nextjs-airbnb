@@ -60,4 +60,3 @@ export const Input: React.FC<Props> = ({
     </div>
   );
 };
-
