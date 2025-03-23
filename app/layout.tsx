@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import '@shared/styles/globals.scss';
+// import type { Metadata } from "next";
+// import { Geist, Geist_Mono } from "next/font/google";
+import "@shared/styles/globals.scss";
 import { Navbar } from "@widgets/navbar";
 
 // import ClientOnly from "@/components/ClientOnly";
@@ -16,6 +16,8 @@ import { ClientOnly } from "@shared/ui";
 import { RegisterModal } from "@widgets/registerModal";
 import { LoginModal } from "@widgets/loginModal";
 import { Footer } from "@widgets/footer";
+import { Providers } from "@app/providers";
+import { getCurrentUser } from "./actions";
 // import getCurrentUser from "./actions/getCurrentUser";
 
 export const metadata = {
@@ -33,20 +35,20 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // const currentUser = await getCurrentUser();
-  const currentUser = null;
+  const currentUser = await getCurrentUser();
   return (
     <html lang="en">
       <body className={font.className}>
         <ClientOnly>
-          {/* <ToastContainerBar /> */}
           {/* <SearchModal /> */}
           <RegisterModal />
           <LoginModal />
           {/* <RentModal /> */}
           <Navbar currentUser={currentUser} />
         </ClientOnly>
-        <div className="pb-20 pt-28">{children}</div>
+        <div className="pb-20 pt-28">
+          <Providers>{children}</Providers>
+        </div>
         <Footer />
       </body>
     </html>

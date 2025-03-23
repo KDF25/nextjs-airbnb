@@ -3,8 +3,8 @@
 import Image from "next/image";
 
 type Props = {
-  src?: string;
-  userName?: string;
+  src?: string | null;
+  userName?: string | null;
 };
 
 export const Avatar: React.FC<Props> = ({ src, userName }) => {

@@ -6,7 +6,7 @@ import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useCallback, useState } from "react";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
-import { AiFillFacebook } from "react-icons/ai";
+import { AiFillFacebook, AiFillGithub } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
 import { toast } from "react-toastify";
 
@@ -87,6 +87,13 @@ export const LoginModal: React.FC = () => {
         label="Continue with Facebook"
         icon={AiFillFacebook}
         onClick={() => signIn("facebook")}
+        isColor
+      />
+      <Button
+        outline
+        label="Continue with Github"
+        icon={AiFillGithub}
+        onClick={() => signIn("github")}
         isColor
       />
       <div className="text-neutral-500 text-center mt-4 font-light">

@@ -1,13 +1,13 @@
 "use client";
 
+import { SafeUser } from "@entities/user";
 import { Search } from "@features/searchBar";
 import UserMenu from "@features/userMenu/userMenu";
 import { Container, Loader, Logo } from "@shared/ui";
 import { Suspense } from "react";
 
 type Props = {
-  //   currentUser?: SafeUser | null;
-  currentUser?: any;
+    currentUser?: SafeUser | null;
 };
 
 export const Navbar: React.FC<Props> = ({ currentUser }) => {

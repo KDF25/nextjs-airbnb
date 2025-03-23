@@ -6,7 +6,7 @@ import axios from "axios";
 import { signIn } from "next-auth/react";
 import React, { useCallback, useState } from "react";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
-import { AiFillFacebook } from "react-icons/ai";
+import { AiFillFacebook, AiFillGithub } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
 import { toast } from "react-toastify";
 
@@ -36,7 +36,7 @@ export const RegisterModal: React.FC = () => {
         loginModel.onOpen();
         registerModel.onClose();
       })
-      .catch((err: any) => toast.error("Something Went Wrong"))
+      .catch((err: any) => toast.error(`Something Went Wrong ${err}`))
       .finally(() => {
         setIsLoading(false);
         toast.success("Register Successfully");
@@ -96,6 +96,13 @@ export const RegisterModal: React.FC = () => {
         label="Continue with Facebook"
         icon={AiFillFacebook}
         onClick={() => signIn("facebook")}
+        isColor
+      />
+      <Button
+        outline
+        label="Continue with GitHub"
+        icon={AiFillGithub}
+        onClick={() => signIn("github")}
         isColor
       />
       <div className="text-neutral-500 text-center mt-4 font-light">
