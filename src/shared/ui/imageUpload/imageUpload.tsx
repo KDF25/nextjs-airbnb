@@ -5,10 +5,6 @@ import Image from "next/image";
 import React, { useCallback } from "react";
 import { TbPhotoPlus } from "react-icons/tb";
 
-declare global {
-  var cloudinary: any;
-}
-
 type Props = {
   onChange: (value: string) => void;
   value: string;
@@ -20,7 +16,7 @@ export const ImageUpload: React.FC<Props> = ({ onChange, value }) => {
       console.log("result", result);
       onChange(result.info.secure_url);
     },
-    [onchange],
+    [onChange],
   );
 
   return (

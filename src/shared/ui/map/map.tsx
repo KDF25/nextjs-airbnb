@@ -9,7 +9,7 @@ import React from "react";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import Flag from "react-world-flags";
 
-// @ts-ignore
+// @ts-expect-error: Удаляем _getIconUrl, так как Leaflet загружает иконки неправильно в Next.js
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
   iconUrl: markerIcon.src,

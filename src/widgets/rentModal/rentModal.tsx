@@ -50,7 +50,7 @@ export const RentModal: React.FC = () => {
       dynamic(() => import("@shared/ui/map/map"), {
         ssr: false,
       }),
-    [location],
+    [],
   );
 
   const setCustomValue = (id: string, value: any) => {
