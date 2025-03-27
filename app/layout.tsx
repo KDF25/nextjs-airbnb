@@ -8,6 +8,7 @@ import { RegisterModal } from "@widgets/registerModal";
 import { RentModal } from "@widgets/rentModal";
 import { Nunito } from "next/font/google";
 import { getCurrentUser } from "./actions";
+import { SearchModal } from "@widgets/searchModal";
 
 export const metadata = {
   title: "Airbnb",
@@ -29,7 +30,7 @@ export default async function RootLayout({
     <html lang="en">
       <body className={font.className}>
         <ClientOnly>
-          {/* <SearchModal /> */}
+          <SearchModal />
           <RegisterModal />
           <LoginModal />
           <RentModal />

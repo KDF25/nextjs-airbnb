@@ -1,4 +1,4 @@
-export enum STEPS {
+export enum RENT_STEPS {
   CATEGORY = 0,
   LOCATION = 1,
   INFO = 2,
