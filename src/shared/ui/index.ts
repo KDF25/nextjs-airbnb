@@ -1,5 +1,6 @@
 export * from "./avatar";
 export * from "./button";
+export * from "./calendar";
 export * from "./categoryBox";
 export * from "./categoryInput";
 export * from "./clientOnly";
@@ -15,3 +16,5 @@ export * from "./loader";
 export * from "./logo";
 export * from "./menuItem";
 export * from "./modal";
+export * from "./offers";
+export * from "./sleep";
