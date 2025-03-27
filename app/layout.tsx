@@ -44,7 +44,7 @@ export default async function RootLayout({
 }) {
   const currentUser = await getCurrentUser();
   return (
-    <html lang="en">
+    <html lang="en" prefix="og: http://ogp.me/ns#">
       <body className={font.className}>
         <ClientOnly>
           <SearchModal />
