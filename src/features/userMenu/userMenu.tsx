@@ -1,6 +1,7 @@
 "use client";
 
 import { SafeUser } from "@entities/user";
+import { menuItems } from "@shared/config";
 import { useLoginModal, useRegisterModal, useRentModal } from "@shared/hooks";
 import { Avatar, MenuItem } from "@shared/ui";
 import { signOut } from "next-auth/react";
@@ -8,7 +9,6 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useCallback, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
-import { menuItems } from "./config";
 
 type Props = {
   currentUser?: SafeUser | null;

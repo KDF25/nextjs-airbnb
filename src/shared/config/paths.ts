@@ -1,4 +1,4 @@
-export enum paths {
+export const enum paths {
   main = "/",
   trips = "/trips",
   favorites = "/favorites",

@@ -1,6 +1,7 @@
 "use client";
 
 import { SafeUser } from "@entities/user";
+import { Categories } from "@features/categories";
 import { Search } from "@features/searchBar";
 import UserMenu from "@features/userMenu/userMenu";
 import { Container, Loader, Logo } from "@shared/ui";
@@ -23,7 +24,7 @@ export const Navbar: React.FC<Props> = ({ currentUser }) => {
             </div>
           </Container>
         </div>
-        {/* <Categories /> */}
+        <Categories />
       </div>
     </Suspense>
   );
